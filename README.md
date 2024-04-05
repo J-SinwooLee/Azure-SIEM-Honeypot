@@ -19,3 +19,4 @@ PowerShell
   1. Click "Virtual Machine" as the screen below
   2. If you cannot find the icon, then you can search it on the search bar
 </b2>
+<img src="1.png">
