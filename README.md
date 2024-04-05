@@ -12,4 +12,10 @@ PowerShell
 
 <h2>Project walk-through</h2>
 <hr>
+
 <h4>How to set up Azure honeypotVM</h4>
+<b2>
+  
+  1. Click "Virtual Machine" as the screen below
+  2. If you cannot find the icon, then you can search it on the search bar
+</b2>
