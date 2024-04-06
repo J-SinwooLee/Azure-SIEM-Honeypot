@@ -28,6 +28,8 @@ On the next screen you will click "Create"
 
 <b2>
 Create a new resource group by clicking "Create new"
+
+For this instance, I will create a resource group name: FirstProject
 <img src="3.png">
 </b2>
 
