@@ -103,9 +103,14 @@ Foundational CSPM - ON/ Servers - ON/ SQL servers on machine - OFF then click "s
 Then move to "Data collection" on the left side. Click "All Events" then click "save"
 <img src="16.png">
 
+<h4>Step 4: Connecting services</h4>
+<br2>
+Now that we've set up all the necessary services, the next step is to establish connections between them to enable communication.
+</br2>
 
-
-
+<br2>
+Let's go backto Log Analaytic Workspace then click "Virtual Machine" on the list then click on the VM that you created. Then click on "Connect".
+<img src="17.png">
 
 
 
