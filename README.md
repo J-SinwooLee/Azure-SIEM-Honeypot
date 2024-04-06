@@ -47,9 +47,25 @@ Once, everything is setup. Click "Next" and get to "Networking" tab.
 <img src="5.png">
 
 <b2>
-We are going to name our virtual network as HoneypotVM-net. Then click on "Advance" next to NIC network security group then "Create new".
+We are going to name our virtual network as HoneypotVM-net. Then click on "Advance" next to Configure Network security group then "Create new".
 
 <img src="6.png">
+
+Click the trash can icone to delete the default setting
+
+<img src="7.png">
+Then click "Add an inbound rule"
+
+<img src="8.png">
+</b2>
+
+<b2>
+Change "Destination port range" to * for Any
+"Action" to "Allow"
+Priority: 100
+We'll name this "ANY_ALLOWED_DANGER", but feel free to choose any other name you prefer.
+
+<img src="9.png">
 
 
 
