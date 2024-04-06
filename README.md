@@ -22,14 +22,14 @@ PowerShell
 <img src="1.png">
 
 <b2>
-On the next screen you will click "Create"
+On the next screen you will click "Create".
 </b2>
 <img src="2.png">
 
 <b2>
-Create a new resource group by clicking "Create new"
+Create a new resource group by clicking "Create new".
 
-For this instance, I will create a resource group name: FirstProject
+For this instance, I will create a resource group name: FirstProject.
 <img src="3.png">
 </b2>
 
@@ -37,5 +37,13 @@ For this instance, I will create a resource group name: FirstProject
 Now we are going to name our VM as HoneypotVM. Choose West US 3 for region. For the image, you will choose either Windows 10 or 11.
 <img src="4.png">
 </b2>
+
+<b2>
+"IMPORTANT"
+
+Username and password will be used for RDP to remotely login in to VM. If the password is too easy then attackers can possiblly brute force themselves in. Be adivsed to create password with this in mind.
+Once, everything is setup. Click "Next"
+
+<img src="5.png">
 
 
