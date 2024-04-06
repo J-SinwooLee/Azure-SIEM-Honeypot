@@ -42,7 +42,7 @@ Now we are going to name our VM as HoneypotVM. Choose West US 3 for region. For 
 "IMPORTANT"
 
 Username and password will be used for RDP to remotely login in to VM. If the password is too easy then attackers can possiblly brute force themselves in. Be adivsed to create password with this in mind.
-Once, everything is setup. Click "Next"
+Once, everything is setup. Click "Next" and get to "Networking" tab.
 
 <img src="5.png">
 
