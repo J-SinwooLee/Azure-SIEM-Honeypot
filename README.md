@@ -82,3 +82,34 @@ Meanwhile we should work on creating Log.
 Then click "Create"
 <img src="10.png">
 
+<br2>
+Resource group is going to be the same as the VM and we are going to name this log as LAW-HoneypotVM. It will have the same region as the VM as well. Then click "Review + Create"
+<img src="11.png">
+</br2>
+
+<h4>Step 3: How to set up Microsoft Defender for Cloud</h4>
+<br2>
+Again we can either search for the service or click on the icon.
+<img src="12.png">
+Then click on "Environment settings" > Subscription name > LAW-HoneypotVM
+<img src="13.png">
+<img src="14.png">
+
+On Defender plans page
+
+Foundational CSPM - ON/ Servers - ON/ SQL servers on machine - OFF then click "save"
+<img src="15.png">
+
+Then move to "Data collection" on the left side. Click "All Events" then click "save"
+<img src="16.png">
+
+
+
+
+
+
+
+
+
+
+
