@@ -64,6 +64,8 @@ Change "Destination port range" to * for Any
 "Action" to "Allow"
 Priority: 100
 We'll name this "ANY_ALLOWED_DANGER", but feel free to choose any other name you prefer.
+When everything is set correctly click "Add" then "Ok".
+At last click "Review + Create"
 
 <img src="9.png">
 
