@@ -73,8 +73,12 @@ At last click "Review + Create"
 <h4>Step 2: How to set up Log in Azure</h4>
 <br2>
 Now VM is going to be created and it will take a moment.
+
 Meanwhile we should work on creating Log.
+
 1. Click Log Analytic Workspace
 2. If you do not see the icon, you can search it on the search bar
+
+Then click "Create"
 <img src="10.png">
 
