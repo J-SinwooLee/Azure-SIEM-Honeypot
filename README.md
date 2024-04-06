@@ -33,4 +33,9 @@ For this instance, I will create a resource group name: FirstProject
 <img src="3.png">
 </b2>
 
+<b2>
+Now we are going to name our VM as HoneypotVM. Choose West US 3 for region. For the image, you will choose either Windows 10 or 11.
+<img src="4.png">
+</b2>
+
 
