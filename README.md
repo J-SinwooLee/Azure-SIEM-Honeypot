@@ -25,3 +25,10 @@ PowerShell
 On the next screen you will click "Create"
 </b2>
 <img src="2.png">
+
+<b2>
+Create a new resource group by clicking "Create new"
+<img src="3.png">
+</b2>
+
+
