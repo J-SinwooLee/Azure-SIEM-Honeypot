@@ -46,4 +46,10 @@ Once, everything is setup. Click "Next" and get to "Networking" tab.
 
 <img src="5.png">
 
+<b2>
+We are going to name our virtual network as HoneypotVM-net. Then click on "Advance" next to NIC network security group then "Create new".
+
+<img src="6.png">
+
+
 
