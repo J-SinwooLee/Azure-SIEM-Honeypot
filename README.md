@@ -152,14 +152,55 @@ Copy the code from then save it as "Log_Exporter"
 <br>
 https://github.com/joshmadakor1/Sentinel-Lab/blob/main/Custom_Security_Log_Exporter.ps1
 <br>
-Please note that you'll need your own API KEY in the script, which you can obtain by signing up at ipgeolocation.io. The daily limit is 1,000 queries, which resets every 24 hours.
+Please note that you'll need your own API KEY in the script, which you can obtain by signing up at ipgeolocation.io. Then replace it with your KEY.
+<br>
+The daily limit is 1,000 queries, which resets every 24 hours.
 <br>
 You can make an account on https://ipgeolocation.io/
 <br>
 Once you've added your API KEY to the script, run the code. You'll soon notice a purple script appearing, indicating that "attackers" have discovered the VM and are attempting to log in unsuccessfully. The script will provide valuable information about the attackers.
 <img src="22.png">
 
+<h4>Step 8: Create custom log</h4>
+<br>
+Go back to Azure.
+<br>
+Navigate to your Log Analytics Workspace in the Azure portal.
+<br>
+Click on "Logs" in the left sidebar.
+<br>
+Under "Tables", click on "Create" and select "New custom log (MMA-based)".
+<br>
+Retrieve the name of the log file from the VM that located C:\ProgramData\failed_rdp.log. Open Notepad on your PC, paste the name of the log file (e.g., "failed_rdp.log") and save it as type "All Files".
+<br>
+Specify the collection path as follows:
+<br>
+Type: Windows
+Path: The path of the file on the VM, such as "C:\ProgramData\failed_rdp.log".
+<br>
+Custom Log Name: FAILED_RDP_WITH_GEO
+<br>
+Click on "Next" and "Review + Create" to create the custom log.
+<br>
+This setup will allow Azure Log Analytics to collect and analyze data from the specified log file on your VM.
+<img src="23.png">
 
+<h4>Step 9: Running a custom log</h4>
+<br>
+Log Analytic Workspace > LAW-HoneypotVM > Log
+<br>
+Type: FAILED_RDP_WITH_GEO
+<br>
+The custom log setup in Azure collects data from "failed_rdp.log" on your VM, capturing failed login attempts sourced from the VM's Event Viewer's security log. 
+<img src="24.png">
+
+<h4>Step 10: Mapping the log using SIEM</h4>
+<br>
+Microsoft Sentinel > LAW-HoneypotVM > WorkBook > Add Workbook
+<img src="25.png">
+<br>
+Click edit and remove 2 default settings
+<img src="26.png">
 
 
 
