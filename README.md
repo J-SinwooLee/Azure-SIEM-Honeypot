@@ -96,8 +96,14 @@ Then click on "Environment settings" > Subscription name > LAW-HoneypotVM
 <img src="14.png">
 
 On Defender plans page
-
-Foundational CSPM - ON/ Servers - ON/ SQL servers on machine - OFF then click "save"
+<br>
+Foundational CSPM - ON
+<br>
+Servers - ON
+<br>
+SQL servers on machine - OFF 
+<br>
+then click "save"
 <img src="15.png">
 
 Then move to "Data collection" on the left side. Click "All Events" then click "save"
@@ -111,6 +117,60 @@ Now that we've set up all the necessary services, the next step is to establish 
 <br2>
 Let's go backto Log Analaytic Workspace then click "Virtual Machine" on the list then click on the VM that you created. Then click on "Connect".
 <img src="17.png">
+
+<h4>Step 5: Microsoft Setinel (SIEM) setup</h4>
+<br>
+You can search or click on Microsofot Sentiel icon.
+<img src="18.png">
+Then click "Create". Your Log Analytic Workspace will come up which in this case will be LAW-HoneypotVM.
+Click the Log then "click Add".
+
+<h4>Step 6: Remote into VM and VM configuration</h4>
+<br>
+Go back to "Virtual Machine" on Azure and click on the VM that you have created then you will find "Public IP address" on overview. 
+<br>
+Copy the address then login to VM via RDP on your PC. 
+
+Then you will use the credential that you created the VM in Step 1.
+<img src="19.png">
+
+"IMPORTANT"
+This action has to be done on your VM not on your PC. Doing it on PC can cause serious problem.
+
+Once you have successfully logged in.
+Search for "wf.msc", then click "Windows Defender Firewall Properties".
+<img src="20.png">
+Turn off the firewall on "Domain Profile", "Private Profile", and "Public Profile"
+By turning them off VM will reponse do the ICMP echo request which will enable people to discover this VM.
+We do not want to do this to our PC.
+<img src="21.png">
+
+<h4>Step 7: Using PowerShell to send logs to SIEM</h4>
+<br>
+In VM search for "PowerShellISE" and start it.
+Copy the code from then save it as "Log_Exporter"
+<br>
+https://github.com/joshmadakor1/Sentinel-Lab/blob/main/Custom_Security_Log_Exporter.ps1
+<br>
+Please note that you'll need your own API KEY in the script, which you can obtain by signing up at ipgeolocation.io. The daily limit is 1,000 queries, which resets every 24 hours.
+<br>
+You can make an account on https://ipgeolocation.io/
+<br>
+Once you've added your API KEY to the script, run the code. You'll soon notice a purple script appearing, indicating that "attackers" have discovered the VM and are attempting to log in unsuccessfully. The script will provide valuable information about the attackers.
+<img src="22.png">
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
