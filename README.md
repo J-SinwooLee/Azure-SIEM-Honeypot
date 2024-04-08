@@ -1,4 +1,4 @@
-# Microsoft Sentinel SIEM Wrold Map Project
+# Microsoft Sentinel SIEM World Map Project
 
 <hr>
 <h3>Overview</h3>
