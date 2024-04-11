@@ -226,9 +226,10 @@ Then change the "Visualization" to "MAP" then click "Map Settings"
 Change the Meteric Label to "label"
 
 <img src="29.png">
-
+<br>
 Now you can view a visualization of attacks worldwide, depicting their frequency, source IP addresses, and estimated locations, including country details.
-
+<img src="30.png">
+<br>
 <h2>Conclusion</h4>
 The project ran for a few days to gather a wider range of attacks. It was fascinating to see attacks happening globally. When we realized how many attacks were targeting just one computer, it made us think about the security challenges larger organizations face. We found out that setting up a strong firewall and NSG can help reduce risks. Using strong passwords also helps keep things safe. Adding IDS/IPS can make security even better. This project was my first time working with SIEM. It allowed me to try out different tools in Azure and write some scripts. This is my first step into the world of cybersecurity, and I'm excited to explore further and dive deeper into the cybersecurity world.
 
