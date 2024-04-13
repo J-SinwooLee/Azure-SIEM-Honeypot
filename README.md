@@ -30,12 +30,12 @@ On the next screen you will click "Create".
 Create a new resource group by clicking "Create new".
 
 For this instance, I will create a resource group name: FirstProject.
-<img src="images/3.png">
+<img src="images/3.PNG">
 </b2>
 
 <b2>
 Now we are going to name our VM as HoneypotVM. Choose West US 3 for region. For the image, you will choose either Windows 10 or 11.
-<img src="images/4.png">
+<img src="images/4.PNG">
 </b2>
 
 <b2>
@@ -44,7 +44,7 @@ Now we are going to name our VM as HoneypotVM. Choose West US 3 for region. For 
 Username and password will be used for RDP to remotely login in to VM. If the password is too easy then attackers can possiblly brute force themselves in. Be adivsed to create password with this in mind.
 Once, everything is setup. Click "Next" and get to "Networking" tab.
 
-<img src="images/5.png">
+<img src="images/5.PNG">
 
 <b2>
 We are going to name our virtual network as HoneypotVM-net. Then click on "Advance" next to Configure Network security group then "Create new".
