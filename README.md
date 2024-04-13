@@ -24,18 +24,18 @@ PowerShell
 <b2>
 On the next screen you will click "Create".
 </b2>
-<img src="2.png">
+<img src="images/2.png">
 
 <b2>
 Create a new resource group by clicking "Create new".
 
 For this instance, I will create a resource group name: FirstProject.
-<img src="3.png">
+<img src="images/3.png">
 </b2>
 
 <b2>
 Now we are going to name our VM as HoneypotVM. Choose West US 3 for region. For the image, you will choose either Windows 10 or 11.
-<img src="4.png">
+<img src="images/4.png">
 </b2>
 
 <b2>
@@ -44,19 +44,19 @@ Now we are going to name our VM as HoneypotVM. Choose West US 3 for region. For 
 Username and password will be used for RDP to remotely login in to VM. If the password is too easy then attackers can possiblly brute force themselves in. Be adivsed to create password with this in mind.
 Once, everything is setup. Click "Next" and get to "Networking" tab.
 
-<img src="5.png">
+<img src="images/5.png">
 
 <b2>
 We are going to name our virtual network as HoneypotVM-net. Then click on "Advance" next to Configure Network security group then "Create new".
 
-<img src="6.png">
+<img src="images/6.png">
 
 Click the trash can icone to delete the default setting
 
-<img src="7.png">
+<img src="images/7.png">
 Then click "Add an inbound rule"
 
-<img src="8.png">
+<img src="images/8.png">
 </b2>
 
 <b2>
@@ -67,7 +67,7 @@ We'll name this "ANY_ALLOWED_DANGER", but feel free to choose any other name you
 When everything is set correctly click "Add" then "Ok".
 At last click "Review + Create"
 
-<img src="9.png">
+<img src="images/9.png">
 </br2>
 
 <h4>Step 2: How to set up Log in Azure</h4>
@@ -80,20 +80,20 @@ Meanwhile we should work on creating Log.
 2. If you do not see the icon, you can search it on the search bar
 
 Then click "Create"
-<img src="10.png">
+<img src="images/10.png">
 
 <br2>
 Resource group is going to be the same as the VM and we are going to name this log as LAW-HoneypotVM. It will have the same region as the VM as well. Then click "Review + Create"
-<img src="11.png">
+<img src="images/11.png">
 </br2>
 
 <h4>Step 3: How to set up Microsoft Defender for Cloud</h4>
 <br2>
 Again we can either search for the service or click on the icon.
-<img src="12.png">
+<img src="images/12.png">
 Then click on "Environment settings" > Subscription name > LAW-HoneypotVM
-<img src="13.png">
-<img src="14.png">
+<img src="images/13.png">
+<img src="images/14.png">
 
 On Defender plans page
 <br>
@@ -104,10 +104,10 @@ Servers - ON
 SQL servers on machine - OFF 
 <br>
 then click "save"
-<img src="15.png">
+<img src="images/15.png">
 
 Then move to "Data collection" on the left side. Click "All Events" then click "save"
-<img src="16.png">
+<img src="images/16.png">
 
 <h4>Step 4: Connecting services</h4>
 <br2>
@@ -116,12 +116,12 @@ Now that we've set up all the necessary services, the next step is to establish 
 
 <br2>
 Let's go backto Log Analaytic Workspace then click "Virtual Machine" on the list then click on the VM that you created. Then click on "Connect".
-<img src="17.png">
+<img src="images/17.png">
 
 <h4>Step 5: Microsoft Setinel (SIEM) setup</h4>
 <br>
 You can search or click on Microsofot Sentiel icon.
-<img src="18.png">
+<img src="images/18.png">
 Then click "Create". Your Log Analytic Workspace will come up which in this case will be LAW-HoneypotVM.
 Click the Log then "click Add".
 
@@ -132,18 +132,18 @@ Go back to "Virtual Machine" on Azure and click on the VM that you have created 
 Copy the address then login to VM via RDP on your PC. 
 
 Then you will use the credential that you created the VM in Step 1.
-<img src="19.png">
+<img src="images/19.png">
 
 "IMPORTANT"
 This action has to be done on your VM not on your PC. Doing it on PC can cause serious problem.
 
 Once you have successfully logged in.
 Search for "wf.msc", then click "Windows Defender Firewall Properties".
-<img src="20.png">
+<img src="images/20.png">
 Turn off the firewall on "Domain Profile", "Private Profile", and "Public Profile"
 By turning them off VM will reponse do the ICMP echo request which will enable people to discover this VM.
 We do not want to do this to our PC.
-<img src="21.png">
+<img src="images/21.png">
 
 <h4>Step 7: Using PowerShell to send logs to SIEM</h4>
 <br>
@@ -159,7 +159,7 @@ The daily limit is 1,000 queries, which resets every 24 hours.
 You can make an account on https://ipgeolocation.io/
 <br>
 Once you've added your API KEY to the script, run the code. You'll soon notice a purple script appearing, indicating that "attackers" have discovered the VM and are attempting to log in unsuccessfully. The script will provide valuable information about the attackers.
-<img src="22.png">
+<img src="images/22.png">
 
 <h4>Step 8: Create custom log</h4>
 <br>
@@ -183,7 +183,7 @@ Custom Log Name: FAILED_RDP_WITH_GEO
 Click on "Next" and "Review + Create" to create the custom log.
 <br>
 This setup will allow Azure Log Analytics to collect and analyze data from the specified log file on your VM.
-<img src="23.png">
+<img src="images/23.png">
 
 <h4>Step 9: Running a custom log</h4>
 <br>
@@ -192,16 +192,16 @@ Log Analytic Workspace > LAW-HoneypotVM > Log
 Type: FAILED_RDP_WITH_GEO
 <br>
 The custom log setup in Azure collects data from "failed_rdp.log" on your VM, capturing failed login attempts sourced from the VM's Event Viewer's security log. 
-<img src="24.png">
+<img src="images/24.png">
 
 <h4>Step 10: Mapping the log using SIEM</h4>
 <br>
 Microsoft Sentinel > LAW-HoneypotVM > WorkBook > Add Workbook
-<img src="25.png">
+<img src="images/25.png">
 <br>
 Click edit and remove 2 default settings. Then Click "Add" and "Add query".
-<img src="26.png">
-<img src="27.png">
+<img src="images/26.png">
+<img src="images/27.png">
 <br>
 Then type:
 <br>
@@ -221,14 +221,14 @@ FAILED_RDP_WITH_GEO_CL | extend
 <br>
 
 Then change the "Visualization" to "MAP" then click "Map Settings"
-<img src="28.png">
+<img src="images/28.png">
 <br>
 Change the Meteric Label to "label"
 
-<img src="29.png">
+<img src="images/29.png">
 <br>
 Now you can view a visualization of attacks worldwide, depicting their frequency, source IP addresses, and estimated locations, including country details.
-<img src="30.png">
+<img src="images/30.png">
 <br>
 <h2>Conclusion</h4>
 The project ran for a few days to gather a wider range of attacks. It was fascinating to see attacks happening globally. When we realized how many attacks were targeting just one computer, it made us think about the security challenges larger organizations face. We found out that setting up a strong firewall and NSG can help reduce risks. Using strong passwords also helps keep things safe. Adding IDS/IPS can make security even better. This project was my first time working with SIEM. It allowed me to try out different tools in Azure and write some scripts. This is my first step into the world of cybersecurity, and I'm excited to explore further and dive deeper into the cybersecurity world.
