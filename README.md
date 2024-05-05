@@ -204,8 +204,8 @@ Click edit and remove 2 default settings. Then Click "Add" and "Add query".
 <img src="images/27.png">
 <br>
 Then type:
-<br>
-FAILED_RDP_WITH_GEO_CL | extend 
+<be>
+<b>FAILED_RDP_WITH_GEO_CL | extend 
     username = extract(@"username:([^,]+)", 1, RawData), 
     timestamp = extract(@"timestamp:([^,]+)", 1, RawData), 
     latitude = extract(@"latitude:([^,]+)", 1, RawData), 
@@ -216,7 +216,7 @@ FAILED_RDP_WITH_GEO_CL | extend
     destination = extract(@"destinationhost:([^,]+)", 1, RawData), 
     country = extract(@"country:([^,]+)", 1, RawData) 
 | where destination != "samplehost" and sourcehost != "" and label != "" and country != "" and state != "" 
-| summarize event_count=count() by timestamp, label, country, state, sourcehost, username, destination, longitude, latitude
+| summarize event_count=count() by timestamp, label, country, state, sourcehost, username, destination, longitude, latitude</b>
 </br>
 <br>
 
